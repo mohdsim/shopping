@@ -26,3 +26,26 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+.landingPageToolBar {
+  --background: rgb(5,134,123);
+  --color: white;
+
+  // --border-color: #f24aec;
+  // --border-width: 4px 0;
+  // --border-style: double;
+
+  --min-height: 30px;
+  // --padding-top: 20px;
+ // --padding-bottom: 20px;
+}
+.landingPageToolBarFrstChild{
+  display: flex;
+}
+.landingPageToolBarContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;}
+  .menubtn{
+    color:  white;
+  }

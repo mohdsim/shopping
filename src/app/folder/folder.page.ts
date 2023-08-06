@@ -7,6 +7,23 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
+  bottomTabContant=[
+    {
+      tabName:'a',iconName:'home-outline',displayName:'Home', navLink:''
+    },
+    {
+      tabName:'a',iconName:'chatbox-outline',displayName:'Message' ,navLink:''
+    },
+    {
+      tabName:'a',iconName:'document-text-outline',displayName:'Post', navLink:''
+    },
+    {
+      tabName:'a',iconName:'cloud-upload-outline',displayName:'Pay Now', navLink:''
+    },
+    {
+      tabName:'a',iconName:'search-outline',displayName:'Search', navLink:''
+    }
+  ]
   public folder!: string;
   private activatedRoute = inject(ActivatedRoute);
   constructor() {}

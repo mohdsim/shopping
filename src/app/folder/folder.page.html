@@ -1,9 +1,16 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+  <ion-toolbar class="landingPageToolBar">
+    <div class="landingPageToolBarContainer">
+      <div  class="landingPageToolBarFrstChild">
+        <ion-buttons slot="start">
+          <ion-menu-button class="menubtn"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{ folder }}</ion-title>
+      </div>
+      <div style="margin-right: 14px;">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -16,6 +23,29 @@
 
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
+    <ion-icon name="mic-outline"></ion-icon>
+   
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button *ngFor="let i of bottomTabContant">
+      <ion-icon name="{{i.iconName}}"></ion-icon>
+       {{i.displayName}}
+    </ion-tab-button>
+    <!-- <ion-tab-button tab="radio">
+      <ion-icon name="radio"></ion-icon>
+      Radio
+    </ion-tab-button>
+    <ion-tab-button tab="library">
+      <ion-icon name="library"></ion-icon>
+      Library
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon name="search"></ion-icon>
+      Search
+    </ion-tab-button> -->
+  </ion-tab-bar>
+</ion-tabs>
